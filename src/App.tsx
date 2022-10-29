@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Hello from './components/Hello';
+import Name from './components/Name';
+import { CustomTyper } from './components/Childs/Child';
+import { Child1 } from './components/Childs/Child1';
+const App =() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Hello TS</h1>
+      <Hello name='Bharat' age={21} gender="Male" />
+      <Name name={{first: 'Bharat', last: 'Kumar'}} />
+      <CustomTyper>This text goes to child component.</CustomTyper>
+      <Child1>
+        <CustomTyper>This is where we use a custom component in another component.</CustomTyper>
+      </Child1>
+    </>
   );
 }
 
