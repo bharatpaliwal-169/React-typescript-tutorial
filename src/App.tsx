@@ -7,7 +7,10 @@ import { Click } from './components/Events/click';
 import { Input } from './components/Events/Input';
 import { Login } from './components/Hooks/Login';
 import { User } from './components/Hooks/User';
-import {Counter} from './components/Hooks/Counter'
+import {Counter} from './components/Hooks/Counter';
+
+import { Box } from './context/Box';
+import { ThemeContextProvider } from './context/ThemeContext';
 const App =() => {
   return (
     <>
@@ -27,6 +30,10 @@ const App =() => {
       <User />
       <h1>Reducer Hook</h1>
       <Counter />
+      <h1>useContextHook</h1>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </>
   );
 }
