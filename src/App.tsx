@@ -6,6 +6,8 @@ import { Child1 } from './components/Childs/Child1';
 import { Click } from './components/Events/click';
 import { Input } from './components/Events/Input';
 import { Login } from './components/Hooks/Login';
+import { User } from './components/Hooks/User';
+import {Counter} from './components/Hooks/Counter'
 const App =() => {
   return (
     <>
@@ -21,6 +23,10 @@ const App =() => {
       <Input value='' handleChange={(event)=> console.log('Input event',event) } />
       <h1>HOOKS</h1>
       <Login />
+      <h2>User : usestate adv</h2>
+      <User />
+      <h1>Reducer Hook</h1>
+      <Counter />
     </>
   );
 }
