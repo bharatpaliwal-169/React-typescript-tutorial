@@ -1,10 +1,4 @@
-import React from 'react'
-type NameProps = {
-  name : {
-    first: string,
-    last: string
-  }
-}
+import { NameProps } from "./Types/Name.type"
 const Name = (props : NameProps) => {
   return (
     <div>
@@ -14,4 +8,4 @@ const Name = (props : NameProps) => {
   )
 }
 
-export default Name;
+export default Name
